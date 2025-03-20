@@ -140,7 +140,7 @@ a{
 .quote-box {
 
     border: 1px solid rgba(255, 255, 255, 0.5);
-    width: 520px;
+    max-width: 520px;
     height: 300px;
     border-radius: 150px 20px 150px 20px;
     position: relative;
@@ -151,6 +151,7 @@ a{
     flex-direction: column;
     justify-content: center;
     margin-bottom: 20px;
+    margin: 10px 20px;
 
 
 
@@ -198,7 +199,7 @@ a{
     padding: 0px 35px;
     text-indent: 50px;
     font-weight: 200;
-    font-size: 22px;
+    font-size: 18px;
 
 }
 
@@ -348,4 +349,14 @@ a{
 .rotate{
     animation: 1.5s infinite ease rotate;
     
+}
+
+@media screen and (max-width:500px) {
+    .quote-box{
+        border-radius: 20px;
+
+    }
+    .quote-text{
+        font-size: 16px;
+    }
 }

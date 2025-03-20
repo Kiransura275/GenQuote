@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+body.dark {
+    background-color: #000000;
+
+    color: rgb(244, 244, 245);
+    overflow: hidden;
+}
+
+body{
+    color: #1E2939;
+}
+
+.mode {
+    height: 30px;
+    display: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.dark .light-mode {
+    display: block;
+}
+
+.light .dark-mode {
+    height: 25px;
+    display: block;
+}
+
+.light-mode:hover {
+    cursor: pointer;
+    transform: rotate(120deg) scale(1.1);
+
+}
+
+.dark-mode:hover {
+    cursor: pointer;
+    transform: scale(0.8);
+
+}
+
+.dark .logo-black{
+    display: none;
+}
+
+
+.light .logo-light{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.light a{
+    color: black;
+
+}
+
+
+
+
+
+/* nav-bar */
+.navbar {
+    border: 1px solid rgba(255, 255, 255);
+    border-radius: 0 0 100px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1em 5em;
+    z-index: 4;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+
+.navbar .nav-title {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-weight: 400;
+    font-size: 2em;
+}
+
+.logo {
+
+    height: 35px;
+    display: block;
+
+}
+
+
+/* cover-img */
+
+.cover-img {
+    display: none;
+}
+
+
+.dark .cover-img {
+    display: block;
+    position: absolute;
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    animation: 1.5s infinite alternate scale;
+
+
+}
+
+
+/* main-container */
+.main-container {
+
+    /* border: 2px solid white; */
+    height: 75vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+/* quote-box */
+
+.quote-box {
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: 520px;
+    height: 300px;
+    border-radius: 150px 20px 150px 20px;
+    position: relative;
+    z-index: 5;
+    /* background-color: rgba(0, 0, 0, 0.1); */
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+
+
+
+
+
+}
+
+
+.dark .quote-box {
+    background-color: rgb(200, 200, 200, 0.1);
+}
+
+
+
+.quote-box-top {
+    display: flex;
+    justify-content: end;
+    gap: 25px;
+    padding: 20px 50px;
+    margin-top: -30px;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    /* border: 1px solid red; */
+
+
+}
+
+.icon {
+    font-size: 1.4em;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.icon:hover {
+    opacity: 1;
+    transform: scale(0.9);
+}
+
+
+
+.quote-text {
+    /* border: 1px solid green; */
+    padding: 0px 35px;
+    text-indent: 50px;
+    font-weight: 200;
+    font-size: 22px;
+
+}
+
+
+.quote-author {
+    align-self: end;
+    margin: 0 60px;
+    font-size: 16px;
+
+}
+
+/* next quote-btn */
+
+.next-quote-btn {
+
+    padding: 10px 30px;
+    background-color: #fff;
+    border: none;
+    border-radius: 25px;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+
+}
+
+.light .next-quote-btn{
+    background-color: aqua;
+}
+
+
+.light .next-quote-btn:hover{
+    background-color: rgb(6, 247, 247)
+}
+
+.next-quote-btn:hover {
+
+    transform: scale(0.98);
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+
+
+
+}
+
+
+/* footer */
+.footer {
+    /* border: 1px solid white; */
+    display: flex;
+    position: relative;
+    bottom: 0;
+    justify-content: space-between;
+    padding: 8px 3em;
+}
+
+.dev-by {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.git-hub {
+    color: white;
+    font-size: 25px;
+    animation: 1.5s infinite alternate changeColorDark;
+}
+
+.light .git-hub{
+    animation: 1.5s infinite alternate changeColorLight;
+
+}
+
+@keyframes changeColorDark {
+    0%{
+        color: #fff;
+
+    }
+    50%{
+        color: rgba(255, 255, 255, 0.3);
+
+    }
+    100%{
+        color: rgb(200, 200, 200, 0.1);
+
+    }
+    
+}
+@keyframes changeColorLight {
+    0%{
+        color: rgb(44, 188, 99);
+
+    }
+    50%{
+        color: #4267B2;
+
+    }
+    100%{
+        color:#95D03A;
+
+    }
+    
+}
+
+@keyframes rotate {
+    0%{
+        transform: scale(0.9);
+        opacity: 0.4;
+     
+    }
+    25%{
+        transform: scale(0.96);
+        opacity: 0.5;
+       
+    }
+    50%{
+        transform: scale(0.93);
+        opacity: 0.3;
+    }
+    75%{
+        transform: scale(0.96);
+        opacity: 0.5;
+    }
+    100%{
+        transform: scale(0.9);
+        opacity: 0.3;
+    }
+    
+}
+
+
+@keyframes scale {
+    from{
+        opacity: 0.8;
+        transform: scale(1) ;
+    }
+    to{
+        opacity: 1;
+        transform: scale(0.98);
+    }
+    
+}
+
+
+.rotate{
+    animation: 1.5s infinite ease rotate;
+    
+}
